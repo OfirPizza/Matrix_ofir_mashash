@@ -10,19 +10,6 @@
         android:id="@+id/mainFragment"
         android:name="com.test.matrix_ofir_mashash.ui.mainScreen.MainFragment"
         android:label="MainFragment"
-        tools:layout="@layout/fragment_main">
-        <action
-            android:id="@+id/action_mainFragment_to_selectedItemFragment"
-            app:destination="@id/selectedItemFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_main" />
 
-
-    <fragment
-        android:id="@+id/selectedItemFragment"
-        android:name="com.test.matrix_ofir_mashash.ui.selectedItem.SelectedItemFragment"
-        android:label="SelectedItemFragment"
-        tools:layout="@layout/fragment_item_selected">
-        <argument android:name="selectedModel" app:argType="com.test.matrix_ofir_mashash.ui.model.DataItemObject" app:nullable="false"/>
-
-    </fragment>
 </navigation>

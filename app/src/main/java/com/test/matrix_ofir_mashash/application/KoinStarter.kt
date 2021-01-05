@@ -1,7 +1,7 @@
 package com.test.matrix_ofir_mashash.application
 
 import android.app.Application
-import com.test.matrix_ofir_mashash.ui.di.dataModule
+import com.test.matrix_ofir_mashash.ui.mainScreen.di.dataModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.KoinApplication

@@ -9,7 +9,8 @@ import kotlinx.android.synthetic.main.fragment_tabs.*
 
 
 class TabsFragment : Fragment(R.layout.fragment_tabs), TabLayout.OnTabSelectedListener {
-    var onRefreshList: ((Unit) -> Unit)? = null
+    var onOtherTabClick: ((Unit) -> Unit)? = null
+    var onRecommendedClick: ((Unit) -> Unit)? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -21,7 +22,12 @@ class TabsFragment : Fragment(R.layout.fragment_tabs), TabLayout.OnTabSelectedLi
     }
 
     override fun onTabSelected(tab: TabLayout.Tab?) {
-        onRefreshList?.invoke(Unit)
+        if (tab?.text.toString() == resources.getString(R.string.reco_str)) {
+            onRecommendedClick?.invoke(Unit)
+            return
+        }
+        onOtherTabClick?.invoke(Unit)
+
     }
 
     override fun onTabUnselected(tab: TabLayout.Tab?) {}
